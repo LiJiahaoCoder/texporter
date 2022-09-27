@@ -1,10 +1,26 @@
 {
   "name": "texporter",
-  "version": "1.0.0",
-  "main": "build/index.js",
-  "type": "commonjs",
-  "types": "build/index.d.ts",
+  "author": "Jiahao Li",
+  "version": "0.1.0",
+  "main": "./build/index.js",
+  "typings": "./build/index.d.ts",
   "license": "MIT",
+  "type": "commonjs",
+  "keywords": [
+    "Test",
+    "Frontend",
+    "Export"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiJiahaoCoder/texporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LiJiahaoCoder/texporter/issues"
+  },
+  "bin": {
+    "tex": "./build/bin/tex"
+  },
   "scripts": {
     "test": "jest",
     "build": "tsc",

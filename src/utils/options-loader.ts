@@ -6,7 +6,7 @@ const DEFAULT_OPTIONS: TexporterOptions = {
     '**/__tests__/**/*.[jt]s?(x)',
     '**/?(*.)+(spec|test).[tj]s?(x)',
   ],
-  testPathPattern: ['src/**/*'],
+  include: ['src/**/*'],
 };
 
 export function getOptions(): TexporterOptions {

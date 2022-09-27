@@ -1,4 +1,5 @@
 {
   "format": "pdf",
-  "testMatch": ["**/__tests__/**/*.[jt]s?(x)"]
+  "testMatch": ["**/__tests__/**/*.[jt]s?(x)"],
+  "include": ["src/**/*"]
 }

@@ -2,7 +2,6 @@ export default {
   roots: [
     '<rootDir>'
   ],
-  clearMocks: true,
   testEnvironment: 'jest-environment-node',
   preset: 'ts-jest',
   transform: {
@@ -25,7 +24,9 @@ export default {
   testPathIgnorePatterns: [
     '/node_modules/'
   ],
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    'texporter.json': '<rootDir>/mocks/texporter.json',
+  },
   // modulePathIgnorePatterns: [],
   // resolver: undefined,
   // setupFiles: [],

@@ -1,7 +1,7 @@
 export type Format = 'html' | 'pdf';
 
 export interface TexporterOptions {
-  format?: Format;
-  testMatch?: string[];
-  include?: string[];
+  format: Format;
+  testMatch: string[];
+  include: string[];
 }

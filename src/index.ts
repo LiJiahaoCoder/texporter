@@ -1,6 +1,6 @@
-import { getOptions } from './utils/options-loader';
+import { getFilesMatchedIncludePattern } from './utils/files-loader';
 
-getOptions();
+getFilesMatchedIncludePattern();
 
 export default function sum(a: number, b: number) {
   return a + b;

@@ -6,15 +6,15 @@ const DEFAULT_OPTIONS: TexporterOptions = {
     '**/__tests__/**/*.[jt]s?(x)',
     '**/?(*.)+(spec|test).[tj]s?(x)',
   ],
-  include: ['src/**/*'],
+  include: ['/src'],
 };
 
 export function getOptions(): TexporterOptions {
   const root = process.cwd();
-  let options: TexporterOptions = {};
+  let options!: TexporterOptions;
 
   try {
-    options = require(`${root}/texporter.json`);
+    options = require(`${root}/texporter.json`) ?? DEFAULT_OPTIONS;
   } catch {}
 
   return {

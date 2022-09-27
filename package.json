@@ -1,5 +1,6 @@
 {
   "name": "texporter",
+  "description": "About Export frontend test cases to HTML or PDF",
   "author": "Jiahao Li",
   "version": "0.1.0",
   "main": "./build/index.js",

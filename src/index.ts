@@ -1,4 +1,4 @@
-import { createHtmlFile } from './utils/generator';
+import { createHtmlFile } from './utils/creator';
 
 function main() {
   createHtmlFile();

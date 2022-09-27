@@ -1,3 +1,4 @@
+import { rootDir } from '../constants/root';
 import { TexporterOptions } from '../types/options';
 
 const DEFAULT_OPTIONS: TexporterOptions = {
@@ -10,11 +11,10 @@ const DEFAULT_OPTIONS: TexporterOptions = {
 };
 
 export function getOptions(): TexporterOptions {
-  const root = process.cwd();
   let options!: TexporterOptions;
 
   try {
-    options = require(`${root}/texporter.json`) ?? DEFAULT_OPTIONS;
+    options = require(`${rootDir}/texporter.json`) ?? DEFAULT_OPTIONS;
   } catch {}
 
   return {

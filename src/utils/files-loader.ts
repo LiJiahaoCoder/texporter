@@ -1,6 +1,7 @@
 import { join } from 'path';
 import { readdirSync, statSync } from 'fs';
 import { getOptions } from './options-loader';
+import { rootDir } from '../constants/root';
 
 interface Path {
   includePath: string;
@@ -42,10 +43,7 @@ export function getMatchedPaths(): string[] {
   const result: string[] = [];
   const { include } = getOptions();
   const paths: Path[] = include.map(path => {
-    const joinedPath = join(
-      process.cwd(),
-      path,
-    );
+    const joinedPath = join(rootDir,path);
 
     return {
       includePath: path,

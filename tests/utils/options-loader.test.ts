@@ -8,7 +8,7 @@ describe('Options loader tests', () => {
       expect(result).toEqual({
         format: 'pdf',
         testMatch: ['**/__tests__/**/*.[jt]s?(x)'],
-        include: ['src/**/*'],
+        include: ['mocks/**/*'],
       });
     },
   );

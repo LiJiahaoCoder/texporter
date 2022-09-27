@@ -3,6 +3,8 @@ node_modules
 dist
 build
 coverage
+.texporter
 
 # Files
 yarn-error.log
+texporter.json

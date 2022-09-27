@@ -1,3 +1,7 @@
-export default function sum(a: number, b: number) {
-  return a + b;
+import { createHtmlFile } from './utils/generator';
+
+function main() {
+  createHtmlFile();
 }
+
+main();

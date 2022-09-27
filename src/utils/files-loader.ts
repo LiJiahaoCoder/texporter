@@ -8,17 +8,18 @@ interface Path {
   currentPath: string;
 }
 
-function traverseFilesInDirectory(
+function _traverseFilesInDirectory(
   path: Path,
   result: string[],
 ): void {
   const { currentPath, originPath, includePath } = path;
   const readContent = readdirSync(currentPath);
+
   readContent.forEach((content) => {
     const path = join(currentPath, content);
     const isDir = statSync(path).isDirectory();
     if (isDir) {
-      traverseFilesInDirectory(
+      _traverseFilesInDirectory(
         {
           originPath,
           includePath,
@@ -54,8 +55,20 @@ export function getMatchedPaths(): string[] {
   });
 
   paths.forEach(path => {
-    traverseFilesInDirectory(path, result);
+    _traverseFilesInDirectory(path, result);
   });
 
   return result;
+}
+
+export function getMatchedFiles(): string[] {
+  const paths = getMatchedPaths();
+  const { matchPattern } = getOptions();
+  const patternReg = matchPattern.map(pattern => (
+    new RegExp((pattern))
+  ));
+
+  return paths.filter(path => (
+    patternReg.some(reg => reg.test(path))
+  ));
 }

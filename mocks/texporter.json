@@ -1,5 +1,5 @@
 {
   "format": "pdf",
-  "testMatch": ["**/__tests__/**/*.[jt]s?(x)"],
+  "matchPattern": [".*\/__tests__\/.*\\.[jt]sx?$"],
   "include": ["/mocks"]
 }

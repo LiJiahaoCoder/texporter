@@ -2,9 +2,9 @@ import { TexporterOptions } from '../types/options';
 
 const DEFAULT_OPTIONS: TexporterOptions = {
   format: 'html',
-  testMatch: [
-    '**/__tests__/**/*.[jt]s?(x)',
-    '**/?(*.)+(spec|test).[tj]s?(x)',
+  matchPattern: [
+    '.*\/__tests__\/.*\\.[jt]sx?$',
+    '*.(spec|test)\\.[jt]sx?$',
   ],
   include: ['/src'],
 };

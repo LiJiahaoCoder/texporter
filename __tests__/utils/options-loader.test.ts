@@ -7,7 +7,7 @@ describe('Options loader tests', () => {
       const result = getOptions();
       expect(result).toEqual({
         format: 'pdf',
-        testMatch: ['**/__tests__/**/*.[jt]s?(x)'],
+        matchPattern: ['.*\/__tests__\/.*\\.[jt]sx?$'],
         include: ['/mocks'],
       });
     },
@@ -22,9 +22,9 @@ describe('Options loader tests', () => {
       expect(result)
       .toEqual({
         format: 'html',
-        testMatch: [
-          '**/__tests__/**/*.[jt]s?(x)',
-          '**/?(*.)+(spec|test).[tj]s?(x)',
+        matchPattern: [
+          '.*\/__tests__\/.*\\.[jt]sx?$',
+          '*.(spec|test)\\.[jt]sx?$',
         ],
         include: ['/src'],
       });

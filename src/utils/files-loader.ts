@@ -37,7 +37,7 @@ function traverseFilesInDirectory(
   });
 }
 
-export function getFilesMatchedIncludePattern(): string[] {
+export function getMatchedPaths(): string[] {
   const result: string[] = [];
   const { include } = getOptions();
   const paths: Path[] = include.map(path => {

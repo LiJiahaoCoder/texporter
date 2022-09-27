@@ -1,10 +1,10 @@
-import { getFilesMatchedIncludePattern } from '../../src/utils/files-loader';
+import { getMatchedPaths } from '../../src/utils/files-loader';
 
 describe('Files loader tests', () => {
   test(
-    'Should get correct files list When call getFilesMatchedIncludePattern Given include is mocks directory',
+    'Should get correct files list When call getMatched Given include is mocks directory',
     () => {
-      const result = getFilesMatchedIncludePattern();
+      const result = getMatchedPaths();
       expect(result).toEqual([
         '/mocks/README.md',
         '/mocks/__tests__/index.test.ts',

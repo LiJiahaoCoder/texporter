@@ -2,9 +2,9 @@
   "name": "texporter",
   "description": "About Export frontend test cases to HTML or PDF",
   "author": "Jiahao Li",
-  "version": "0.1.1",
-  "main": "./build/index.js",
-  "typings": "./build/index.d.ts",
+  "version": "0.1.2",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
   "license": "MIT",
   "type": "commonjs",
   "keywords": [
@@ -20,13 +20,13 @@
     "url": "https://github.com/LiJiahaoCoder/texporter/issues"
   },
   "bin": {
-    "tex": "./build/bin/tex"
+    "tex": "./bin/tex"
   },
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "postbuild": "ts-node scripts/generate-bin.ts",
-    "prepare": "husky install"
+    "postbuild": "ts-node ./scripts/generate-bin.ts && cp LICENSE package.json ./build",
+    "postinstall": "husky install"
   },
   "devDependencies": {
     "@types/jest": "^29.0.3",

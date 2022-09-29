@@ -24,7 +24,7 @@ describe('Options loader tests', () => {
         format: 'html',
         matchPattern: [
           '.*\/__tests__\/.*\\.[jt]sx?$',
-          '*.(spec|test)\\.[jt]sx?$',
+          '.*(spec|test)\\.[jt]sx?$',
         ],
         include: ['/src'],
       });
